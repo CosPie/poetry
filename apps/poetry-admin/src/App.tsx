@@ -9,6 +9,10 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
+import { TangPoetryList } from "./tangPoetry/TangPoetryList";
+import { TangPoetryCreate } from "./tangPoetry/TangPoetryCreate";
+import { TangPoetryEdit } from "./tangPoetry/TangPoetryEdit";
+import { TangPoetryShow } from "./tangPoetry/TangPoetryShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -41,6 +45,13 @@ const App = (): React.ReactElement => {
           edit={UserEdit}
           create={UserCreate}
           show={UserShow}
+        />
+        <Resource
+          name="TangPoetry"
+          list={TangPoetryList}
+          edit={TangPoetryEdit}
+          create={TangPoetryCreate}
+          show={TangPoetryShow}
         />
       </Admin>
     </div>
